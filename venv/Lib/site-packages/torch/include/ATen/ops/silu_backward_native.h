@@ -20,5 +20,6 @@ TORCH_API at::Tensor math_silu_backward(const at::Tensor & grad_output, const at
 struct TORCH_API structured_silu_backward_out : public at::meta::structured_silu_backward {
 void impl(const at::Tensor & grad_output, const at::Tensor & self, const at::Tensor & grad_input);
 };
+TORCH_API at::Tensor silu_backward_nested(const at::Tensor & grad_output, const at::Tensor & self);
 } // namespace native
 } // namespace at

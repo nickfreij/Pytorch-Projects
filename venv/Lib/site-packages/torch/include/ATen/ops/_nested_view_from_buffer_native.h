@@ -16,6 +16,6 @@
 
 namespace at {
 namespace native {
-TORCH_API at::Tensor _nested_view_from_buffer(const at::Tensor & self, const at::Tensor & nested_size, const at::Tensor & nested_strides, at::IntArrayRef offsets);
+TORCH_API at::Tensor _nested_view_from_buffer(const at::Tensor & self, const at::Tensor & nested_size, const at::Tensor & nested_strides, const at::Tensor & offsets);
 } // namespace native
 } // namespace at

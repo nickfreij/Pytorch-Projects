@@ -22,9 +22,26 @@
 namespace at {
 
 
-// aten::_assert_tensor_metadata(Tensor a, int[]? size=None, int[]? stride=None, ScalarType? dtype=None) -> ()
+// aten::_assert_tensor_metadata(Tensor a, SymInt[]? size=None, SymInt[]? stride=None, ScalarType? dtype=None) -> ()
 inline void _assert_tensor_metadata(const at::Tensor & a, at::OptionalIntArrayRef size=c10::nullopt, at::OptionalIntArrayRef stride=c10::nullopt, c10::optional<at::ScalarType> dtype=c10::nullopt) {
+    return at::_ops::_assert_tensor_metadata::call(a, size.has_value() ? c10::make_optional(c10::fromIntArrayRefSlow(*size)) : c10::nullopt, stride.has_value() ? c10::make_optional(c10::fromIntArrayRefSlow(*stride)) : c10::nullopt, dtype);
+}
+namespace symint {
+  template <typename T, typename = std::enable_if_t<std::is_same<T, int64_t>::value>>
+  void _assert_tensor_metadata(const at::Tensor & a, at::OptionalIntArrayRef size=c10::nullopt, at::OptionalIntArrayRef stride=c10::nullopt, c10::optional<at::ScalarType> dtype=c10::nullopt) {
+    return at::_ops::_assert_tensor_metadata::call(a, size.has_value() ? c10::make_optional(c10::fromIntArrayRefSlow(*size)) : c10::nullopt, stride.has_value() ? c10::make_optional(c10::fromIntArrayRefSlow(*stride)) : c10::nullopt, dtype);
+  }
+}
+
+// aten::_assert_tensor_metadata(Tensor a, SymInt[]? size=None, SymInt[]? stride=None, ScalarType? dtype=None) -> ()
+inline void _assert_tensor_metadata_symint(const at::Tensor & a, at::OptionalSymIntArrayRef size=c10::nullopt, at::OptionalSymIntArrayRef stride=c10::nullopt, c10::optional<at::ScalarType> dtype=c10::nullopt) {
     return at::_ops::_assert_tensor_metadata::call(a, size, stride, dtype);
+}
+namespace symint {
+  template <typename T, typename = std::enable_if_t<std::is_same<T, c10::SymInt>::value>>
+  void _assert_tensor_metadata(const at::Tensor & a, at::OptionalSymIntArrayRef size=c10::nullopt, at::OptionalSymIntArrayRef stride=c10::nullopt, c10::optional<at::ScalarType> dtype=c10::nullopt) {
+    return at::_ops::_assert_tensor_metadata::call(a, size, stride, dtype);
+  }
 }
 
 }

@@ -19,6 +19,8 @@ namespace compositeexplicitautograd {
 
 TORCH_API at::Tensor & _empty_per_channel_affine_quantized_out(at::Tensor & out, at::IntArrayRef size, const at::Tensor & scales, const at::Tensor & zero_points, int64_t axis, c10::optional<at::MemoryFormat> memory_format=MemoryFormat::Contiguous);
 TORCH_API at::Tensor & _empty_per_channel_affine_quantized_outf(at::IntArrayRef size, const at::Tensor & scales, const at::Tensor & zero_points, int64_t axis, c10::optional<at::MemoryFormat> memory_format, at::Tensor & out);
+TORCH_API at::Tensor & _empty_per_channel_affine_quantized_symint_out(at::Tensor & out, c10::SymIntArrayRef size, const at::Tensor & scales, const at::Tensor & zero_points, int64_t axis, c10::optional<at::MemoryFormat> memory_format=MemoryFormat::Contiguous);
+TORCH_API at::Tensor & _empty_per_channel_affine_quantized_symint_outf(c10::SymIntArrayRef size, const at::Tensor & scales, const at::Tensor & zero_points, int64_t axis, c10::optional<at::MemoryFormat> memory_format, at::Tensor & out);
 
 } // namespace compositeexplicitautograd
 } // namespace at

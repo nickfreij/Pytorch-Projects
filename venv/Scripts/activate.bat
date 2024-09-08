@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\Nick's PC\Desktop\Coding\Coding\Pytorch-Learning\venv
+set VIRTUAL_ENV=C:\Users\Nick's PC\Desktop\Coding\Coding\Pytorch-Projects\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

@@ -16,6 +16,6 @@
 
 namespace at {
 namespace native {
-TORCH_API at::Tensor tile(const at::Tensor & self, at::IntArrayRef dims);
+TORCH_API at::Tensor tile_symint(const at::Tensor & self, c10::SymIntArrayRef dims);
 } // namespace native
 } // namespace at

@@ -19,5 +19,7 @@ namespace native {
 TORCH_API at::Tensor logical_not(const at::Tensor & self);
 TORCH_API at::Tensor & logical_not_(at::Tensor & self);
 TORCH_API at::Tensor & logical_not_out(const at::Tensor & self, at::Tensor & out);
+TORCH_API at::Tensor NestedTensor_logical_not(const at::Tensor & self);
+TORCH_API at::Tensor & NestedTensor_logical_not_(at::Tensor & self);
 } // namespace native
 } // namespace at

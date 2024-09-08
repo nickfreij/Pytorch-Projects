@@ -19,6 +19,8 @@ namespace meta {
 
 TORCH_API at::Tensor _efficientzerotensor(at::IntArrayRef size, at::TensorOptions options={});
 TORCH_API at::Tensor _efficientzerotensor(at::IntArrayRef size, c10::optional<at::ScalarType> dtype, c10::optional<at::Layout> layout, c10::optional<at::Device> device, c10::optional<bool> pin_memory);
+TORCH_API at::Tensor _efficientzerotensor_symint(c10::SymIntArrayRef size, at::TensorOptions options={});
+TORCH_API at::Tensor _efficientzerotensor_symint(c10::SymIntArrayRef size, c10::optional<at::ScalarType> dtype, c10::optional<at::Layout> layout, c10::optional<at::Device> device, c10::optional<bool> pin_memory);
 
 } // namespace meta
 } // namespace at

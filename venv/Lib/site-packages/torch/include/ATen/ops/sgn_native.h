@@ -19,6 +19,8 @@ namespace native {
 struct TORCH_API structured_sgn_out : public at::meta::structured_sgn {
 void impl(const at::Tensor & self, const at::Tensor & out);
 };
+TORCH_API at::Tensor NestedTensor_sgn(const at::Tensor & self);
+TORCH_API at::Tensor & NestedTensor_sgn_(at::Tensor & self);
 TORCH_API at::Tensor sgn_sparse(const at::Tensor & self);
 TORCH_API at::Tensor & sgn_sparse_out(const at::Tensor & self, at::Tensor & out);
 TORCH_API at::Tensor & sgn_sparse_(at::Tensor & self);

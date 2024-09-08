@@ -16,6 +16,6 @@
 
 namespace at {
 namespace native {
-TORCH_API void _validate_sparse_coo_tensor_args(const at::Tensor & indices, const at::Tensor & values, at::IntArrayRef size);
+TORCH_API void _validate_sparse_coo_tensor_args(const at::Tensor & indices, const at::Tensor & values, at::IntArrayRef size, c10::optional<bool> is_coalesced=c10::nullopt);
 } // namespace native
 } // namespace at

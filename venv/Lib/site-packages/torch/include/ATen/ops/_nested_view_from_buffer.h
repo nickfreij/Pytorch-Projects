@@ -22,8 +22,8 @@
 namespace at {
 
 
-// aten::_nested_view_from_buffer(Tensor(a) self, Tensor nested_size, Tensor nested_strides, int[] offsets) -> Tensor(a)
-inline at::Tensor _nested_view_from_buffer(const at::Tensor & self, const at::Tensor & nested_size, const at::Tensor & nested_strides, at::IntArrayRef offsets) {
+// aten::_nested_view_from_buffer(Tensor(a) self, Tensor nested_size, Tensor nested_strides, Tensor offsets) -> Tensor(a)
+inline at::Tensor _nested_view_from_buffer(const at::Tensor & self, const at::Tensor & nested_size, const at::Tensor & nested_strides, const at::Tensor & offsets) {
     return at::_ops::_nested_view_from_buffer::call(self, nested_size, nested_strides, offsets);
 }
 

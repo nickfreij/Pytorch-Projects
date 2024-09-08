@@ -22,8 +22,8 @@
 namespace at {
 
 
-// aten::_cufft_clear_plan_cache(int device_index) -> ()
-inline void _cufft_clear_plan_cache(int64_t device_index) {
+// aten::_cufft_clear_plan_cache(DeviceIndex device_index) -> ()
+inline void _cufft_clear_plan_cache(at::DeviceIndex device_index) {
     return at::_ops::_cufft_clear_plan_cache::call(device_index);
 }
 

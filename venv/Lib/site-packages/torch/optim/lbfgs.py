@@ -182,7 +182,9 @@ def _strong_wolfe(obj_func,
 
 
 class LBFGS(Optimizer):
-    """Implements L-BFGS algorithm, heavily inspired by `minFunc
+    """Implements L-BFGS algorithm.
+
+    Heavily inspired by `minFunc
     <https://www.cs.ubc.ca/~schmidtm/Software/minFunc.html>`_.
 
     .. warning::
@@ -205,7 +207,7 @@ class LBFGS(Optimizer):
         max_eval (int): maximal number of function evaluations per optimization
             step (default: max_iter * 1.25).
         tolerance_grad (float): termination tolerance on first order optimality
-            (default: 1e-5).
+            (default: 1e-7).
         tolerance_change (float): termination tolerance on function
             value/parameter changes (default: 1e-9).
         history_size (int): update history size (default: 100).
@@ -282,7 +284,7 @@ class LBFGS(Optimizer):
 
     @torch.no_grad()
     def step(self, closure):
-        """Performs a single optimization step.
+        """Perform a single optimization step.
 
         Args:
             closure (Callable): A closure that reevaluates the model

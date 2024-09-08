@@ -17,7 +17,7 @@ namespace at {
 
 namespace cuda {
 
-TORCH_API ::std::tuple<at::Tensor,at::Tensor> std_mean(const at::Tensor & self, at::OptionalIntArrayRef dim=c10::nullopt, c10::optional<int64_t> correction=c10::nullopt, bool keepdim=false);
+TORCH_API ::std::tuple<at::Tensor,at::Tensor> std_mean(const at::Tensor & self, at::OptionalIntArrayRef dim=c10::nullopt, const c10::optional<at::Scalar> & correction=c10::nullopt, bool keepdim=false);
 
 } // namespace cuda
 } // namespace at

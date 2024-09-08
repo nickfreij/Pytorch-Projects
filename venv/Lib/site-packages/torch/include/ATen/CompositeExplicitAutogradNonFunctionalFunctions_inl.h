@@ -70,6 +70,7 @@
 #include <ATen/ops/argmin_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/as_strided_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/as_strided_copy_compositeexplicitautogradnonfunctional_dispatch.h>
+#include <ATen/ops/as_strided_scatter_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/asin_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/asinh_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/atan_compositeexplicitautogradnonfunctional_dispatch.h>
@@ -105,6 +106,7 @@
 #include <ATen/ops/detach_copy_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/diag_embed_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/diagonal_copy_compositeexplicitautogradnonfunctional_dispatch.h>
+#include <ATen/ops/diagonal_scatter_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/digamma_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/div_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/elu_compositeexplicitautogradnonfunctional_dispatch.h>
@@ -221,6 +223,7 @@
 #include <ATen/ops/scatter_reduce_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/select_backward_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/select_copy_compositeexplicitautogradnonfunctional_dispatch.h>
+#include <ATen/ops/select_scatter_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/sgn_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/sigmoid_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/sigmoid_backward_compositeexplicitautogradnonfunctional_dispatch.h>
@@ -232,6 +235,7 @@
 #include <ATen/ops/sinc_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/sinh_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/slice_copy_compositeexplicitautogradnonfunctional_dispatch.h>
+#include <ATen/ops/slice_scatter_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/slow_conv_transpose2d_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/smooth_l1_loss_compositeexplicitautogradnonfunctional_dispatch.h>
 #include <ATen/ops/softplus_compositeexplicitautogradnonfunctional_dispatch.h>

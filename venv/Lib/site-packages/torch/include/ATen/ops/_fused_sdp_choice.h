@@ -22,9 +22,9 @@
 namespace at {
 
 
-// aten::_fused_sdp_choice(Tensor query, Tensor key, Tensor value, Tensor? attn_mask=None, float dropout_p=0.0, bool is_causal=False) -> int
-inline int64_t _fused_sdp_choice(const at::Tensor & query, const at::Tensor & key, const at::Tensor & value, const c10::optional<at::Tensor> & attn_mask={}, double dropout_p=0.0, bool is_causal=false) {
-    return at::_ops::_fused_sdp_choice::call(query, key, value, attn_mask, dropout_p, is_causal);
+// aten::_fused_sdp_choice(Tensor query, Tensor key, Tensor value, Tensor? attn_mask=None, float dropout_p=0.0, bool is_causal=False, *, float? scale=None) -> int
+inline int64_t _fused_sdp_choice(const at::Tensor & query, const at::Tensor & key, const at::Tensor & value, const c10::optional<at::Tensor> & attn_mask={}, double dropout_p=0.0, bool is_causal=false, c10::optional<double> scale=c10::nullopt) {
+    return at::_ops::_fused_sdp_choice::call(query, key, value, attn_mask, dropout_p, is_causal, scale);
 }
 
 }

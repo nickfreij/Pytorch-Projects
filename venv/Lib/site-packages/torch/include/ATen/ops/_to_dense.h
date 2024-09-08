@@ -22,13 +22,13 @@
 namespace at {
 
 
-// aten::_to_dense.out(Tensor self, ScalarType? dtype=None, *, Tensor(a!) out) -> Tensor(a!)
-inline at::Tensor & _to_dense_out(at::Tensor & out, const at::Tensor & self, c10::optional<at::ScalarType> dtype=c10::nullopt) {
-    return at::_ops::_to_dense_out::call(self, dtype, out);
+// aten::_to_dense.out(Tensor self, ScalarType? dtype=None, bool? masked_grad=None, *, Tensor(a!) out) -> Tensor(a!)
+inline at::Tensor & _to_dense_out(at::Tensor & out, const at::Tensor & self, c10::optional<at::ScalarType> dtype=c10::nullopt, c10::optional<bool> masked_grad=c10::nullopt) {
+    return at::_ops::_to_dense_out::call(self, dtype, masked_grad, out);
 }
-// aten::_to_dense.out(Tensor self, ScalarType? dtype=None, *, Tensor(a!) out) -> Tensor(a!)
-inline at::Tensor & _to_dense_outf(const at::Tensor & self, c10::optional<at::ScalarType> dtype, at::Tensor & out) {
-    return at::_ops::_to_dense_out::call(self, dtype, out);
+// aten::_to_dense.out(Tensor self, ScalarType? dtype=None, bool? masked_grad=None, *, Tensor(a!) out) -> Tensor(a!)
+inline at::Tensor & _to_dense_outf(const at::Tensor & self, c10::optional<at::ScalarType> dtype, c10::optional<bool> masked_grad, at::Tensor & out) {
+    return at::_ops::_to_dense_out::call(self, dtype, masked_grad, out);
 }
 
 }

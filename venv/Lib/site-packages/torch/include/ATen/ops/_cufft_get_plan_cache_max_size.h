@@ -22,8 +22,8 @@
 namespace at {
 
 
-// aten::_cufft_get_plan_cache_max_size(int device_index) -> int
-inline int64_t _cufft_get_plan_cache_max_size(int64_t device_index) {
+// aten::_cufft_get_plan_cache_max_size(DeviceIndex device_index) -> int
+inline int64_t _cufft_get_plan_cache_max_size(at::DeviceIndex device_index) {
     return at::_ops::_cufft_get_plan_cache_max_size::call(device_index);
 }
 

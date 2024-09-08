@@ -19,6 +19,7 @@ namespace native {
 TORCH_API at::Tensor normal_functional(const at::Tensor & self, double mean=0, double std=1, c10::optional<at::Generator> generator=c10::nullopt);
 TORCH_API at::Tensor & normal_out(const at::Tensor & self, double mean, double std, c10::optional<at::Generator> generator, at::Tensor & out);
 TORCH_API at::Tensor & normal_(at::Tensor & self, double mean=0, double std=1, c10::optional<at::Generator> generator=c10::nullopt);
+TORCH_API at::Tensor & normal_nested_(at::Tensor & self, double mean=0, double std=1, c10::optional<at::Generator> generator=c10::nullopt);
 TORCH_API at::Tensor & normal_sparse_csr_(at::Tensor & self, double mean=0, double std=1, c10::optional<at::Generator> generator=c10::nullopt);
 TORCH_API at::Tensor & normal_meta_(at::Tensor & self, double mean=0, double std=1, c10::optional<at::Generator> generator=c10::nullopt);
 TORCH_API at::Tensor normal(const at::Tensor & mean, double std=1, c10::optional<at::Generator> generator=c10::nullopt);

@@ -19,5 +19,7 @@ namespace native {
 struct TORCH_API structured_silu_out : public at::meta::structured_silu {
 void impl(const at::Tensor & self, const at::Tensor & out);
 };
+TORCH_API at::Tensor NestedTensor_silu(const at::Tensor & self);
+TORCH_API at::Tensor & NestedTensor_silu_(at::Tensor & self);
 } // namespace native
 } // namespace at
