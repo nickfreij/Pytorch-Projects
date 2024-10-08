@@ -32,6 +32,7 @@ X_train, y_train = X[:train_split], y[:train_split]
 X_test, y_test = X[train_split:], y[train_split:]
 
 # Lets visualize this
+# %%
 def plot_predictions(train_data=X_train,
                      train_labels=y_train,
                      test_data=X_test,
@@ -163,6 +164,8 @@ for epoch in range(epochs):
 #print("\nAnd the original values for weights and bias are:")
 #print(f"weights: {weight}, bias: {bias}")
 
-# Plotting data
+# Plotting data the # and 2 %'s initiates the jupyter lab notebook
+# %%
 plot_predictions(X_train, y_train, X_test, y_test)
 plot_predictions(predictions=test_pred.cpu())
+# %%
